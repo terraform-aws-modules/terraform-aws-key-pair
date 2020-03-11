@@ -12,13 +12,28 @@ Only Terraform 0.12 is supported.
 
 ## Usage
 
-### Private bucket with versioning enabled
+### Create new EC2 key pair 
+
+```hcl
+resource "tls_private_key" "this" {
+  algorithm = "RSA"
+}
+
+module "key_pair" {
+  source = "terraform-aws-modules/key-pair/aws"
+
+  key_name   = "deployer-one"
+  public_key = tls_private_key.this.public_key_openssh
+}
+```
+
+### Import existing public key as EC2 key pair
 
 ```hcl
 module "key_pair" {
   source = "terraform-aws-modules/key-pair/aws"
 
-  key_name   = "deployer"
+  key_name   = "deployer-two"
   public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD3F6tyPEFEzV0LX3X8BsXdMsQz1x2cEikKDEY0aIj41qgxMCP/iteneqXSIFZBp5vizPvaoIR3Um9xK7PGoW8giupGn+EPuxIA4cDM4vzOqOkiMPhz5XK0whEjkVzTo4+S0puvDZuwIsdiW9mxhJc7tgBNL0cYlWSYVkz4G/fslNfRPW5mYAM49f4fhtxPb5ok4Q2Lg9dPKVHO/Bgeu5woMc7RY0p1ej6D4CKFE6lymSDJpW0YHX/wqE9+cfEauh7xZcG0q9t2ta6F6fmX0agvpFyZo8aFbXeUBr7osSCJNgvavWbM/06niWrOvYX2xwWdhXmXSrbX8ZbabVohBK41 email@example.com"
 
 }
@@ -43,14 +58,21 @@ module "key_pair" {
 * [Complete](https://github.com/terraform-aws-modules/terraform-aws-key-pair/tree/master/examples/complete) - Create EC2 key pair
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Providers
+
+| Name | Version |
+|------|---------|
+| aws | ~> 2.46.0 |
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|:----:|:-----:|:-----:|
-| create\_key\_pair | Controls if key pair should be created | bool | `"true"` | no |
-| key\_name | The name for the key pair. | string | `"null"` | no |
-| key\_name\_prefix | Creates a unique name beginning with the specified prefix. Conflicts with key_name. | string | `"null"` | no |
-| public\_key | The public key material. | string | `""` | no |
+|------|-------------|------|---------|:-----:|
+| create\_key\_pair | Controls if key pair should be created | `bool` | `true` | no |
+| key\_name | The name for the key pair. | `string` | n/a | yes |
+| key\_name\_prefix | Creates a unique name beginning with the specified prefix. Conflicts with key\_name. | `string` | n/a | yes |
+| public\_key | The public key material. | `string` | `""` | no |
+| tags | A map of tags to add to key pair resource. | `map(string)` | `{}` | no |
 
 ## Outputs
 
@@ -58,6 +80,7 @@ module "key_pair" {
 |------|-------------|
 | this\_key\_pair\_fingerprint | The MD5 public key fingerprint as specified in section 4 of RFC 4716. |
 | this\_key\_pair\_key\_name | The key pair name. |
+| this\_key\_pair\_key\_pair\_id | The key pair ID. |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
