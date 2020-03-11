@@ -21,3 +21,9 @@ variable "public_key" {
   type        = string
   default     = ""
 }
+
+variable "tags" {
+  description = "A map of tags to add to key pair resource."
+  type        = map(string)
+  default     = {}
+}
