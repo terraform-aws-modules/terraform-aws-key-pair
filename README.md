@@ -62,7 +62,7 @@ module "key_pair" {
 
 | Name | Version |
 |------|---------|
-| aws | ~> 2.46.0 |
+| aws | ~> 2.46 |
 
 ## Inputs
 
