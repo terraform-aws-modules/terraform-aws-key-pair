@@ -58,19 +58,26 @@ module "key_pair" {
 * [Complete](https://github.com/terraform-aws-modules/terraform-aws-key-pair/tree/master/examples/complete) - Create EC2 key pair
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| terraform | >= 0.12.6, < 0.14 |
+| aws | >= 2.46, < 4.0 |
+
 ## Providers
 
 | Name | Version |
 |------|---------|
-| aws | ~> 2.46 |
+| aws | >= 2.46, < 4.0 |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:-----:|
+|------|-------------|------|---------|:--------:|
 | create\_key\_pair | Controls if key pair should be created | `bool` | `true` | no |
-| key\_name | The name for the key pair. | `string` | n/a | yes |
-| key\_name\_prefix | Creates a unique name beginning with the specified prefix. Conflicts with key\_name. | `string` | n/a | yes |
+| key\_name | The name for the key pair. | `string` | `null` | no |
+| key\_name\_prefix | Creates a unique name beginning with the specified prefix. Conflicts with key\_name. | `string` | `null` | no |
 | public\_key | The public key material. | `string` | `""` | no |
 | tags | A map of tags to add to key pair resource. | `map(string)` | `{}` | no |
 
