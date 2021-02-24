@@ -31,6 +31,20 @@ Note that this example may create resources which cost money. Run `terraform des
 | random | >= 2.0 |
 | tls | >= 1.0 |
 
+## Modules
+
+| Name | Source | Version |
+|------|--------|---------|
+| key_pair | ../../ |  |
+| key_pair_external | ../../ |  |
+
+## Resources
+
+| Name |
+|------|
+| [random_pet](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/pet) |
+| [tls_private_key](https://registry.terraform.io/providers/hashicorp/tls/latest/docs/resources/private_key) |
+
 ## Inputs
 
 No input.
@@ -42,5 +56,4 @@ No input.
 | this\_key\_pair\_fingerprint | The MD5 public key fingerprint as specified in section 4 of RFC 4716. |
 | this\_key\_pair\_key\_name | The key pair name. |
 | this\_key\_pair\_key\_pair\_id | The key pair ID. |
-
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
