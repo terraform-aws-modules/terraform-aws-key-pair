@@ -71,6 +71,16 @@ module "key_pair" {
 |------|---------|
 | aws | >= 2.46 |
 
+## Modules
+
+No Modules.
+
+## Resources
+
+| Name |
+|------|
+| [aws_key_pair](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/key_pair) |
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
@@ -88,7 +98,6 @@ module "key_pair" {
 | this\_key\_pair\_fingerprint | The MD5 public key fingerprint as specified in section 4 of RFC 4716. |
 | this\_key\_pair\_key\_name | The key pair name. |
 | this\_key\_pair\_key\_pair\_id | The key pair ID. |
-
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Authors
