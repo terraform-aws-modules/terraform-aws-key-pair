@@ -62,42 +62,42 @@ module "key_pair" {
 
 | Name | Version |
 |------|---------|
-| terraform | >= 0.12.6 |
-| aws | >= 2.46 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.12.6 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 2.46 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| aws | >= 2.46 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 2.46 |
 
 ## Modules
 
-No Modules.
+No modules.
 
 ## Resources
 
-| Name |
-|------|
-| [aws_key_pair](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/key_pair) |
+| Name | Type |
+|------|------|
+| [aws_key_pair.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/key_pair) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| create\_key\_pair | Controls if key pair should be created | `bool` | `true` | no |
-| key\_name | The name for the key pair. | `string` | `null` | no |
-| key\_name\_prefix | Creates a unique name beginning with the specified prefix. Conflicts with key\_name. | `string` | `null` | no |
-| public\_key | The public key material. | `string` | `""` | no |
-| tags | A map of tags to add to key pair resource. | `map(string)` | `{}` | no |
+| <a name="input_create_key_pair"></a> [create\_key\_pair](#input\_create\_key\_pair) | Controls if key pair should be created | `bool` | `true` | no |
+| <a name="input_key_name"></a> [key\_name](#input\_key\_name) | The name for the key pair. | `string` | `null` | no |
+| <a name="input_key_name_prefix"></a> [key\_name\_prefix](#input\_key\_name\_prefix) | Creates a unique name beginning with the specified prefix. Conflicts with key\_name. | `string` | `null` | no |
+| <a name="input_public_key"></a> [public\_key](#input\_public\_key) | The public key material. | `string` | `""` | no |
+| <a name="input_tags"></a> [tags](#input\_tags) | A map of tags to add to key pair resource. | `map(string)` | `{}` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| this\_key\_pair\_fingerprint | The MD5 public key fingerprint as specified in section 4 of RFC 4716. |
-| this\_key\_pair\_key\_name | The key pair name. |
-| this\_key\_pair\_key\_pair\_id | The key pair ID. |
+| <a name="output_this_key_pair_fingerprint"></a> [this\_key\_pair\_fingerprint](#output\_this\_key\_pair\_fingerprint) | The MD5 public key fingerprint as specified in section 4 of RFC 4716. |
+| <a name="output_this_key_pair_key_name"></a> [this\_key\_pair\_key\_name](#output\_this\_key\_pair\_key\_name) | The key pair name. |
+| <a name="output_this_key_pair_key_pair_id"></a> [this\_key\_pair\_key\_pair\_id](#output\_this\_key\_pair\_key\_pair\_id) | The key pair ID. |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Authors
