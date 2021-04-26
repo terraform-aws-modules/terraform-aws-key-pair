@@ -95,9 +95,9 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_this_key_pair_fingerprint"></a> [this\_key\_pair\_fingerprint](#output\_this\_key\_pair\_fingerprint) | The MD5 public key fingerprint as specified in section 4 of RFC 4716. |
-| <a name="output_this_key_pair_key_name"></a> [this\_key\_pair\_key\_name](#output\_this\_key\_pair\_key\_name) | The key pair name. |
-| <a name="output_this_key_pair_key_pair_id"></a> [this\_key\_pair\_key\_pair\_id](#output\_this\_key\_pair\_key\_pair\_id) | The key pair ID. |
+| <a name="output_key_pair_fingerprint"></a> [key\_pair\_fingerprint](#output\_key\_pair\_fingerprint) | The MD5 public key fingerprint as specified in section 4 of RFC 4716. |
+| <a name="output_key_pair_key_name"></a> [key\_pair\_key\_name](#output\_key\_pair\_key\_name) | The key pair name. |
+| <a name="output_key_pair_key_pair_id"></a> [key\_pair\_key\_pair\_id](#output\_key\_pair\_key\_pair\_id) | The key pair ID. |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Authors
