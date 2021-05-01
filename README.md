@@ -2,17 +2,9 @@
 
 Terraform module which creates EC2 key pair resource by Terraform AWS provider.
 
-This type of resources are supported:
-
-* [EC2 Key Pair](https://www.terraform.io/docs/providers/aws/r/key_pair.html)
-
-## Terraform versions
-
-Only Terraform 0.12 is supported.
-
 ## Usage
 
-### Create new EC2 key pair 
+### Create new EC2 key pair
 
 ```hcl
 resource "tls_private_key" "this" {
@@ -55,7 +47,7 @@ module "key_pair" {
 
 ## Examples:
 
-* [Complete](https://github.com/terraform-aws-modules/terraform-aws-key-pair/tree/master/examples/complete) - Create EC2 key pair
+- [Complete](https://github.com/terraform-aws-modules/terraform-aws-key-pair/tree/master/examples/complete) - Create EC2 key pair
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
@@ -102,8 +94,8 @@ No modules.
 
 ## Authors
 
-Module managed by [Anton Babenko](https://github.com/antonbabenko).
+Module is maintained by [Anton Babenko](https://github.com/antonbabenko) with help from [these awesome contributors](https://github.com/terraform-aws-modules/terraform-aws-key-pair/graphs/contributors).
 
 ## License
 
-Apache 2 Licensed. See LICENSE for full details.
+Apache 2 Licensed. See [LICENSE](https://github.com/terraform-aws-modules/terraform-aws-key-pair/tree/master/LICENSE) for full details.
