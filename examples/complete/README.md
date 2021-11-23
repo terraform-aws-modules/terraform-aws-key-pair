@@ -35,8 +35,8 @@ Note that this example may create resources which cost money. Run `terraform des
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_key_pair"></a> [key\_pair](#module\_key\_pair) | ../../ |  |
-| <a name="module_key_pair_external"></a> [key\_pair\_external](#module\_key\_pair\_external) | ../../ |  |
+| <a name="module_key_pair"></a> [key\_pair](#module\_key\_pair) | ../../ | n/a |
+| <a name="module_key_pair_external"></a> [key\_pair\_external](#module\_key\_pair\_external) | ../../ | n/a |
 
 ## Resources
 
