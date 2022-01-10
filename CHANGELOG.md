@@ -1,3 +1,14 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+### [1.0.1](https://github.com/terraform-aws-modules/terraform-aws-key-pair/compare/v1.0.0...v1.0.1) (2022-01-10)
+
+
+### Bug Fixes
+
+* update CI/CD process to enable auto-release workflow ([#23](https://github.com/terraform-aws-modules/terraform-aws-key-pair/issues/23)) ([012633f](https://github.com/terraform-aws-modules/terraform-aws-key-pair/commit/012633f303ac41efc186bb4c2258eadfd600ab0a))
+
 <a name="v1.0.0"></a>
 ## [v1.0.0] - 2021-04-26
 
