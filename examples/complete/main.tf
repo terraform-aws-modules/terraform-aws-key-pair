@@ -1,29 +1,50 @@
-resource "random_pet" "this" {
-  length = 2
+provider "aws" {
+  region = local.region
 }
 
-resource "tls_private_key" "this" {
-  algorithm = "RSA"
+locals {
+  name   = "ex-${replace(basename(path.cwd), "_", "-")}"
+  region = "eu-west-1"
+
+  tags = {
+    Example    = local.name
+    GithubRepo = "terraform-aws-key-pair"
+    GithubOrg  = "terraform-aws-modules"
+  }
 }
+
+################################################################################
+# Key Pair Module
+################################################################################
 
 module "key_pair" {
   source = "../../"
 
-  key_name   = random_pet.this.id
-  public_key = tls_private_key.this.public_key_openssh
+  key_name           = local.name
+  create_private_key = true
 
-  tags = {
-    Terraform = "<3"
-  }
+  tags = local.tags
 }
 
 module "key_pair_external" {
   source = "../../"
 
-  key_name   = "${random_pet.this.id}-external"
-  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD3F6tyPEFEzV0LX3X8BsXdMsQz1x2cEikKDEY0aIj41qgxMCP/iteneqXSIFZBp5vizPvaoIR3Um9xK7PGoW8giupGn+EPuxIA4cDM4vzOqOkiMPhz5XK0whEjkVzTo4+S0puvDZuwIsdiW9mxhJc7tgBNL0cYlWSYVkz4G/fslNfRPW5mYAM49f4fhtxPb5ok4Q2Lg9dPKVHO/Bgeu5woMc7RY0p1ej6D4CKFE6lymSDJpW0YHX/wqE9+cfEauh7xZcG0q9t2ta6F6fmX0agvpFyZo8aFbXeUBr7osSCJNgvavWbM/06niWrOvYX2xwWdhXmXSrbX8ZbabVohBK41 email@example.com"
+  key_name   = "${local.name}-external"
+  public_key = trimspace(tls_private_key.this.public_key_openssh)
 
-  tags = {
-    External = "yes"
-  }
+  tags = local.tags
+}
+
+module "key_pair_disabled" {
+  source = "../../"
+
+  create = false
+}
+
+################################################################################
+# Supporting Resources
+################################################################################
+
+resource "tls_private_key" "this" {
+  algorithm = "RSA"
 }
