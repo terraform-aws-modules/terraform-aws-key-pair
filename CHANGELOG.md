@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [2.0.1](https://github.com/terraform-aws-modules/terraform-aws-key-pair/compare/v2.0.0...v2.0.1) (2022-11-07)
+
+
+### Bug Fixes
+
+* Update CI configuration files to use latest version ([#26](https://github.com/terraform-aws-modules/terraform-aws-key-pair/issues/26)) ([6a0b8d8](https://github.com/terraform-aws-modules/terraform-aws-key-pair/commit/6a0b8d837ac40c56920b3e86dda943956955ff51))
+
 ## [2.0.0](https://github.com/terraform-aws-modules/terraform-aws-key-pair/compare/v1.0.1...v2.0.0) (2022-07-20)
 
 
