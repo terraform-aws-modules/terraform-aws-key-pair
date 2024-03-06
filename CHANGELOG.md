@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.0.3](https://github.com/terraform-aws-modules/terraform-aws-key-pair/compare/v2.0.2...v2.0.3) (2024-03-06)
+
+
+### Bug Fixes
+
+* Update CI workflow versions to remove deprecated runtime warnings ([#29](https://github.com/terraform-aws-modules/terraform-aws-key-pair/issues/29)) ([edae1e0](https://github.com/terraform-aws-modules/terraform-aws-key-pair/commit/edae1e02e30511eca64167c7e057679a2632f159))
+
 ### [2.0.2](https://github.com/terraform-aws-modules/terraform-aws-key-pair/compare/v2.0.1...v2.0.2) (2023-01-24)
 
 
