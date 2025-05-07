@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.1.0](https://github.com/terraform-aws-modules/terraform-aws-key-pair/compare/v2.0.3...v2.1.0) (2025-05-07)
+
+
+### Features
+
+* Added wrappers ([#31](https://github.com/terraform-aws-modules/terraform-aws-key-pair/issues/31)) ([7a6dc0a](https://github.com/terraform-aws-modules/terraform-aws-key-pair/commit/7a6dc0a22ba755f4d2eb053003d03a989408ebc4))
+
+
+### Bug Fixes
+
+* Update CI workflow versions to latest ([#30](https://github.com/terraform-aws-modules/terraform-aws-key-pair/issues/30)) ([cb143fb](https://github.com/terraform-aws-modules/terraform-aws-key-pair/commit/cb143fb0d5341b974926a678a0b6e3a75d0afc06))
+
 ## [2.0.3](https://github.com/terraform-aws-modules/terraform-aws-key-pair/compare/v2.0.2...v2.0.3) (2024-03-06)
 
 
