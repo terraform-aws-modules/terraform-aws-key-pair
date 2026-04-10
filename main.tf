@@ -14,7 +14,7 @@ resource "aws_key_pair" "this" {
 }
 
 ################################################################################
-# Private Key
+# Private Key (TLS provider — not an AWS resource; no per-region argument)
 ################################################################################
 
 resource "tls_private_key" "this" {
