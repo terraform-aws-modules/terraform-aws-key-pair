@@ -43,6 +43,28 @@ module "key_pair" {
 }
 ```
 
+### EC2 Key pair in a specific region (AWS provider v6+)
+
+With [Terraform AWS provider v6](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/key_pair#region), you can set `region` on the key pair so a single provider configuration can manage keys in multiple regions. Leave `region` unset to use the provider’s default region.
+
+```hcl
+module "key_pair_use1" {
+  source = "terraform-aws-modules/key-pair/aws"
+
+  key_name           = "deployer-use1"
+  create_private_key = true
+  region             = "us-east-1"
+}
+
+module "key_pair_euw1" {
+  source = "terraform-aws-modules/key-pair/aws"
+
+  key_name           = "deployer-euw1"
+  create_private_key = true
+  region             = "eu-west-1"
+}
+```
+
 ## Conditional creation
 
 Sometimes you need to have a way to create key pair conditionally but Terraform does not allow to use `count` inside `module` block, so the solution is to specify argument `create_key_pair`.
@@ -67,14 +89,14 @@ module "key_pair" {
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 4.21 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 6.0 |
 | <a name="requirement_tls"></a> [tls](#requirement\_tls) | >= 3.4 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 4.21 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 6.0 |
 | <a name="provider_tls"></a> [tls](#provider\_tls) | >= 3.4 |
 
 ## Modules
@@ -99,6 +121,7 @@ No modules.
 | <a name="input_private_key_algorithm"></a> [private\_key\_algorithm](#input\_private\_key\_algorithm) | Name of the algorithm to use when generating the private key. Currently-supported values are `RSA` and `ED25519` | `string` | `"RSA"` | no |
 | <a name="input_private_key_rsa_bits"></a> [private\_key\_rsa\_bits](#input\_private\_key\_rsa\_bits) | When algorithm is `RSA`, the size of the generated RSA key, in bits (default: `4096`) | `number` | `4096` | no |
 | <a name="input_public_key"></a> [public\_key](#input\_public\_key) | The public key material | `string` | `""` | no |
+| <a name="input_region"></a> [region](#input\_region) | AWS region for the key pair. When `null` (default), the region configured in the provider is used. Requires Terraform AWS provider v6.0 or newer | `string` | `null` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | A map of tags to add to all resources | `map(string)` | `{}` | no |
 
 ## Outputs

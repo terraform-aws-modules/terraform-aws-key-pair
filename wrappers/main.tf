@@ -5,6 +5,7 @@ module "wrapper" {
 
   create                = try(each.value.create, var.defaults.create, true)
   create_private_key    = try(each.value.create_private_key, var.defaults.create_private_key, false)
+  region                = try(each.value.region, var.defaults.region, null)
   key_name              = try(each.value.key_name, var.defaults.key_name, null)
   key_name_prefix       = try(each.value.key_name_prefix, var.defaults.key_name_prefix, null)
   private_key_algorithm = try(each.value.private_key_algorithm, var.defaults.private_key_algorithm, "RSA")

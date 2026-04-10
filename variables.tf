@@ -10,6 +10,12 @@ variable "tags" {
   default     = {}
 }
 
+variable "region" {
+  description = "AWS region for the key pair. When `null` (default), the region configured in the provider is used. Requires Terraform AWS provider v6.0 or newer"
+  type        = string
+  default     = null
+}
+
 ################################################################################
 # Key Pair
 ################################################################################

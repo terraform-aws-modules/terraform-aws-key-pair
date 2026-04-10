@@ -5,6 +5,7 @@
 resource "aws_key_pair" "this" {
   count = var.create ? 1 : 0
 
+  region          = var.region
   key_name        = var.key_name
   key_name_prefix = var.key_name_prefix
   public_key      = var.create_private_key ? trimspace(tls_private_key.this[0].public_key_openssh) : var.public_key
