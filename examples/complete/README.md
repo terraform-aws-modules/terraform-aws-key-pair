@@ -21,7 +21,7 @@ Note that this example may create resources which cost money. Run `terraform des
 ## Requirements
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0 |
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 6.0 |
 | <a name="requirement_tls"></a> [tls](#requirement\_tls) | >= 3.4 |
@@ -29,13 +29,13 @@ Note that this example may create resources which cost money. Run `terraform des
 ## Providers
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="provider_tls"></a> [tls](#provider\_tls) | >= 3.4 |
 
 ## Modules
 
 | Name | Source | Version |
-|------|--------|---------|
+| ---- | ------ | ------- |
 | <a name="module_key_pair"></a> [key\_pair](#module\_key\_pair) | ../../ | n/a |
 | <a name="module_key_pair_disabled"></a> [key\_pair\_disabled](#module\_key\_pair\_disabled) | ../../ | n/a |
 | <a name="module_key_pair_external"></a> [key\_pair\_external](#module\_key\_pair\_external) | ../../ | n/a |
@@ -43,7 +43,7 @@ Note that this example may create resources which cost money. Run `terraform des
 ## Resources
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [tls_private_key.this](https://registry.terraform.io/providers/hashicorp/tls/latest/docs/resources/private_key) | resource |
 
 ## Inputs
@@ -53,7 +53,7 @@ No inputs.
 ## Outputs
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | <a name="output_external_key_pair_arn"></a> [external\_key\_pair\_arn](#output\_external\_key\_pair\_arn) | The key pair ARN |
 | <a name="output_external_key_pair_fingerprint"></a> [external\_key\_pair\_fingerprint](#output\_external\_key\_pair\_fingerprint) | The MD5 public key fingerprint as specified in section 4 of RFC 4716 |
 | <a name="output_external_key_pair_id"></a> [external\_key\_pair\_id](#output\_external\_key\_pair\_id) | The key pair ID |
