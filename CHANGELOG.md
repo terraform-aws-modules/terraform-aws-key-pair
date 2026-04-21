@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.0.0](https://github.com/terraform-aws-modules/terraform-aws-key-pair/compare/v2.1.1...v3.0.0) (2026-04-21)
+
+### ⚠ BREAKING CHANGES
+
+* Raise MSV of Terraform to `v1.5.7` and AWS provider to `v6.0` to support `region` argument (#35)
+
+### Features
+
+* Raise MSV of Terraform to `v1.5.7` and AWS provider to `v6.0` to support `region` argument ([#35](https://github.com/terraform-aws-modules/terraform-aws-key-pair/issues/35)) ([266b2a4](https://github.com/terraform-aws-modules/terraform-aws-key-pair/commit/266b2a45a8169ab68d26cc7ce6bbe489f99451f3))
+
 ## [2.1.1](https://github.com/terraform-aws-modules/terraform-aws-key-pair/compare/v2.1.0...v2.1.1) (2025-10-21)
 
 ### Bug Fixes
