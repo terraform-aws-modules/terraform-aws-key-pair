@@ -10,6 +10,12 @@ variable "tags" {
   default     = {}
 }
 
+variable "region" {
+  description = "Region where the resource(s) will be managed. Defaults to the Region set in the provider configuration"
+  type        = string
+  default     = null
+}
+
 ################################################################################
 # Key Pair
 ################################################################################
@@ -46,6 +52,12 @@ variable "private_key_algorithm" {
   description = "Name of the algorithm to use when generating the private key. Currently-supported values are `RSA` and `ED25519`"
   type        = string
   default     = "RSA"
+}
+
+variable "private_key_ecdsa_curve" {
+  description = "When algorithm is `ECDSA`, the name of the elliptic curve to use. Currently-supported values are: `P224`, `P256`, `P384`, `P521`. (default: `P224`)"
+  type        = string
+  default     = null
 }
 
 variable "private_key_rsa_bits" {
